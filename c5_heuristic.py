@@ -52,8 +52,8 @@ if __name__ == '__main__':
         for j in range(m):
             saving_matrix[i, j] = Customer.get_saving(Customers[i], Customers[j], depot.x, depot.y)
     pop_size = 100
-    population = np.random.randint(0, 4, size=[pop_size, dimension])
-    # population = np.ones((pop_size, dimension))
+    # population = np.random.randint(0, 4, size=[pop_size, dimension])
+    population = np.ones((pop_size, dimension))
     pop_obj = np.zeros(pop_size)
     for i in range(pop_size):
         routes_all = assignment_generate.route(population[i, :], Customers_all, capacity, angle_matrix, distance_matrix, gravitation_matrix, saving_matrix)
